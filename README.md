@@ -116,6 +116,9 @@ This repository builds the PDF for you. The `Generate PDF` GitHub Action:
 * on a pull request, builds the PDF, uploads it as a downloadable artifact, and comments on the
   pull request with a link to it.
 
+Only one build runs at a time per branch: if you push again while a build is still going, the
+older build is superseded, so the committed PDF always matches the newest `paper.md`.
+
 So the current PDF is always at `paper/paper.pdf`, and you can review changes as a PDF before
 merging them. Alternatively, the BioHackrXiv [Preview Server](http://preview.biohackrxiv.org/)
 will build a PDF from a repository URL.
